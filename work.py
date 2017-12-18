@@ -86,10 +86,10 @@ def probabilityNodes(G,start,end):
     return np.random.choice(arre,1,p)[0] # Return the random node generated from the loop
     #return p
 def main():
-    randomGraphProb = randGraphWithProbability(7) # We get the random graph where t =1000 as mentioned in Task1
-    print randomGraphProb
-    #plt.bar(CombinedDegree.keys(), CombinedDegree.values(), color='g')
-    #plt.show()
+    randomGraphProb = randGraphWithProbability(1000) # We get the random graph where t =1000 as mentioned in Task1
+    inDegree,outDegree,CombinedDegree = getInOutDegrees(randomGraphProb)
+    plt.bar(CombinedDegree.keys(), CombinedDegree.values(), color='g')
+    plt.show()
 
 if __name__ == "__main__":
    main()
